@@ -1,10 +1,10 @@
-import React from "react";
+import { React, useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import classes from "./quotes.module.css";
 
 function Quotation() {
-  const [data, setData] = React.useState(null);
+  const [data, setData] = useState(null);
 
   async function updateQuote() {
     try {
@@ -18,7 +18,7 @@ function Quotation() {
     }
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     updateQuote();
   }, []);
 
@@ -38,7 +38,7 @@ function Quotation() {
           </blockquote>
         </Card.Body>
         <Card.Footer>
-          <Button style={{ color: "white" }} onClick={updateQuote}>
+          <Button style={{ color: "#f2f2f2git" }} onClick={updateQuote}>
             New Quote
           </Button>
         </Card.Footer>
